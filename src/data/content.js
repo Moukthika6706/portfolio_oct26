@@ -99,7 +99,7 @@ export const contact = [
   { label: '✉ Email', href: 'mailto:moukthika6706@gmail.com' },
   { label: '☎ +91 93901 30430', href: 'tel:+919390130430' },
   { label: 'GitHub', href: 'https://github.com/Moukthika6706', external: true },
-  { label: 'LinkedIn', href: 'https://www.linkedin.com/in/moukthika-m-839544428/', external: true },
+  { label: 'LinkedIn', href: 'https://www.linkedin.com/in/moukthika67/', external: true },
 ];
 
 export const navLinks = [
