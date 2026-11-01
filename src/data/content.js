@@ -119,4 +119,5 @@ export const navLinks = [
     ],
   },
   { id: 'contact', label: 'Contact' },
+  { id: 'resume', label: 'Resume', href: '/resume.pdf' }, // opens the PDF in a new tab
 ];

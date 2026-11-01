@@ -19,7 +19,7 @@ export default function Navbar() {
   }, []);
 
   useEffect(() => {
-    const close = () => window.innerWidth > 800 && setOpen(false);
+    const close = () => window.innerWidth > 980 && setOpen(false);
     window.addEventListener('resize', close);
     return () => window.removeEventListener('resize', close);
   }, []);
@@ -32,6 +32,12 @@ export default function Navbar() {
 
   const isOn = (link) => (link.children ? link.children.some((c) => c.id === active) : link.id === active);
 
+  // section links scroll smoothly; links with an href (Resume) open in a new tab
+  const linkProps = (l) =>
+    l.href
+      ? { href: l.href, target: '_blank', rel: 'noopener noreferrer', onClick: () => setOpen(false) }
+      : { href: `#${l.id}`, onClick: (e) => go(e, l.id) };
+
   return (
     <nav className="nav" aria-label="Main">
       <a className="logo" href="#home" onClick={(e) => go(e, 'home')}>
@@ -42,17 +48,16 @@ export default function Navbar() {
         {navLinks.map((link) => (
           <li key={link.label} className={link.children ? 'dd' : undefined}>
             <a
-              href={`#${link.id}`}
+              {...linkProps(link)}
               className={isOn(link) ? 'on' : undefined}
               aria-haspopup={link.children ? 'true' : undefined}
-              onClick={(e) => go(e, link.id)}
             >
               {link.label}
             </a>
             {link.children && (
               <div className="menu">
                 {link.children.map((c) => (
-                  <a key={c.id} href={`#${c.id}`} className={c.id === active ? 'on' : undefined} onClick={(e) => go(e, c.id)}>
+                  <a key={c.id} {...linkProps(c)} className={c.id === active ? 'on' : undefined}>
                     {c.label}
                   </a>
                 ))}
@@ -77,7 +82,7 @@ export default function Navbar() {
       {open && (
         <div className="mnav" id="mobile-nav">
           {flatLinks.map((l) => (
-            <a key={l.id} href={`#${l.id}`} className={l.id === active ? 'on' : undefined} onClick={(e) => go(e, l.id)}>
+            <a key={l.id} {...linkProps(l)} className={l.id === active ? 'on' : undefined}>
               {l.label}
             </a>
           ))}

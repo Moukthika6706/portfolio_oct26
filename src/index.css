@@ -140,7 +140,7 @@ body {
 }
 .mnav a { color: #ffdfe1; text-decoration: none; padding: 10px 14px; border-radius: 12px; }
 .mnav a.on, .mnav a:hover { background: #ffdfe1; color: #6d000f; }
-@media (max-width: 800px) {
+@media (max-width: 980px) { /* nav links need ~960px */
   .nav ul { display: none; }
   .burger { display: block; }
 }
