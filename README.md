@@ -19,7 +19,7 @@ npm run preview  # serve the production build locally
 | About text, education (Class XII / X), publications, certifications, interests, leadership, contact links, nav, intro greetings | `src/data/content.js` (placeholders are marked `// TBD`) |
 | Skills and their logos | `src/data/skills.js` — `icon` uses a [react-icons](https://react-icons.github.io/react-icons/) logo; `label` shows Anton letters instead |
 | "What I'm looking for" statement | `src/components/sections/Looking.jsx` |
-| Social preview (Open Graph) | `index.html` — after deploying, change `og:image` / `og:url` / `twitter:image` to absolute URLs on your domain (e.g. `https://your-site.vercel.app/me.jpg`), since most social sites ignore relative image paths. |
+| Social preview (Open Graph) | `index.html` — the `og:*`, `twitter:*` and canonical tags point at https://portfolio-oct26-inky.vercel.app. If you change the domain, update those URLs. |
 
 ## Real GitHub contribution data
 
