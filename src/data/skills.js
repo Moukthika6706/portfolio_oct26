@@ -1,7 +1,7 @@
 import {
   SiPython, SiCplusplus, SiC, SiJavascript, SiPandas, SiNumpy, SiScikitlearn, SiTensorflow,
   SiLangchain, SiLanggraph, SiModelcontextprotocol, SiReact, SiFlask, SiFastapi, SiMysql,
-  SiDuckdb, SiDocker, SiGit, SiGithub, SiLinux, SiGithubactions,
+  SiDuckdb, SiDocker, SiGit, SiGithub, SiLinux, SiGithubactions, SiJira, SiFigma, SiNotion,
 } from 'react-icons/si';
 import { FaJava, FaAws } from 'react-icons/fa';
 
@@ -66,6 +66,20 @@ export const skills = [
       { name: 'GitHub', icon: SiGithub },
       { name: 'Linux', icon: SiLinux },
       { name: 'CI/CD', icon: SiGithubactions },
+    ],
+  },
+  {
+    category: 'Product Management',
+    items: [
+      { name: 'Product Strategy', label: 'PS' },
+      { name: 'Roadmapping', label: 'MAP' },
+      { name: 'User Research', label: 'UX' },
+      { name: 'PRDs', label: 'PRD' },
+      { name: 'Agile / Scrum', label: 'AGL' },
+      { name: 'A/B Testing', label: 'A/B' },
+      { name: 'Jira', icon: SiJira },
+      { name: 'Figma', icon: SiFigma },
+      { name: 'Notion', icon: SiNotion },
     ],
   },
 ];
