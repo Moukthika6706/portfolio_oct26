@@ -55,7 +55,8 @@ export const publications = [
   {
     venue: 'August 2026',
     title: 'ColoXAI: Explainable Framework for Colorectal Cancer Prediction',
-    note: 'Co-authored and presented at the 2nd IEEE International Conference on Distributed Systems, Computer Networks and Cybersecurity (ICDSCNC 2026).',
+    note: 'Co-authored and published at the 2nd IEEE International Conference on Distributed Systems, Computer Networks and Cybersecurity (ICDSCNC 2026).',
+    link: 'https://ieeexplore.ieee.org/document/11746364',
   },
 ];
 
